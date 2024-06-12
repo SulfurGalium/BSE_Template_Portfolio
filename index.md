@@ -94,6 +94,7 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XZfSQq2BNJk?si=gnxV0VoB6s6afZ-t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+For my starter project I chose the arduino starter project. The components involved were an Arduino R3, an Arduino Protoshield, a servo, and a potentiometer. After you gather the materials solder the  
 For your first milestone, describe what your project is and how you plan to build it. You can include:
 - An explanation about the different components of your project and how they will all integrate together
 - Technical progress you've made so far
