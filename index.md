@@ -94,9 +94,29 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XZfSQq2BNJk?si=gnxV0VoB6s6afZ-t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For my starter project I chose the arduino starter project. The components involved were an Arduino R3, an Arduino Protoshield, a servo, and a potentiometer. After you gather the materials solder the  
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+For my starter project I chose the arduino starter project. The components involved were an Arduino R3, an Arduino Protoshield, a servo, and a potentiometer. After you gather the materials solder them to the protoshield making sure that the yellow wire of the servo is connected to the digital pin you want to control it from (I chose 9) for the potentiometer the middle pin should be attached to the analog in pin you want (I chose A0). Some challanges I faced were when solder would connect pins that werent supposed to be connected and loose connections from both the solder and the potentiometer.
+
+![Headstone Image](StarterProject.jpg)
+
+#Code
+
+```c++
+#include <Servo.h>
+Servo myservo;
+
+int knobPin = A0;  // we connect the potentiometer to A0
+int val;    // variable that will store the value from the analog pin
+
+void setup() {
+  myservo.attach(9);  // the servo is attached to pin 9
+}
+
+void loop() {
+// reads the value of the potentiometer (value between 0 and 1023)
+  val = analogRead(knobPin);
+// use map to convert the knob value to the servo angle number
+  val = map(val, 0, 1023, 0, 180);
+// make the servo go to the angle value
+  myservo.write(val);
+}
+```
