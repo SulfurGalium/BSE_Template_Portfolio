@@ -98,6 +98,7 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 
 For my starter project I chose the arduino starter project. The components involved were an Arduino R3, an Arduino Protoshield, a servo, and a potentiometer. After you gather the materials solder them to the protoshield making sure that the signal wire of the servo is connected to the digital pin you want to control it from (I chose 9) for the potentiometer the middle pin should be attached to the analog in pin you want (I chose A0). Some challanges I faced were when solder would connect pins that werent supposed to be connected and loose connections from both the solder and the potentiometer.
 
+<img src="StarterProject.jpg" alt="Image of Starter Project" style="width:500px;height:500px;">
 ![Headstone Image](StarterProject.jpg)
 
 # Code
