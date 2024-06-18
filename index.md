@@ -11,7 +11,7 @@
 
 <!-- **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help -->
 
-<img src="Shreyan_G.JPG" alt="Shreyan Ganguly Headshot" style="width:536px;height:715px;">
+<img src="Shreyan_G.JPG" alt="Shreyan Ganguly Headshot" style="width:578.18px;height:650px;">
 
 <!--
   
@@ -31,7 +31,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+<!--**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**-->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/D4r-M5sbj2g?si=xL69JCIFBoXLwTrW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -42,15 +42,15 @@ For your second milestone, explain what you've worked on since your previous mil
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
 -->
-# Summary
+## Summary
 
 So far I have now enabled the sensor to detect what color it is facing by matching which color it is closest too on a spectrum of color values.
 
-# Challenges
+## Challenges
 
 A challenge I faced was adjusting the sensitivity of the color sensor so it could accurately differentiate colors while stil being sensitive to what it was looking at. I overcame this with trial and error tweaking the sensitivity values.
 
-# Code
+## Code
 
 ```python
 # SPDX-FileCopyrightText: 2023 John Park for Adafruit
