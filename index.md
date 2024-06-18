@@ -207,6 +207,7 @@ For your first milestone, describe what your project is and how you plan to buil
 - Challenges you're facing and solving in your future milestones
 - What your plan is to complete your project
 -->
+
 ## Summary
 
 There are three components of my project, a color sensor, a speaker, a feather microcontroller chip. Currently I am not using the color sensor and just playing notes but for my next milestone I plan to play noes depending on the color sensed.
