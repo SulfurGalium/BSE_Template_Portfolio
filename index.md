@@ -35,17 +35,20 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/D4r-M5sbj2g?si=xL69JCIFBoXLwTrW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<!--
 For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
 - Technical details of what you've accomplished and how they contribute to the final goal
 - What has been surprising about the project so far
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
-
+-->
 # Summary
 
-So far I have now enabled
+So far I have now enabled the sensor to detect what color it is facing by matching which color it is closest too on a spectrum of color values.
 
 # Challenges
+
+A challenge I faced was adjusting the sensitivity of the color sensor so it could accurately differentiate colors while stil being sensitive to what it was looking at. I overcame this with trial and error tweaking the sensitivity values.
 
 # Code
 
