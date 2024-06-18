@@ -11,7 +11,7 @@
 
 <!-- **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help -->
 
-<img src="Shreyan_G.JPG" alt="Shreyan Ganguly Headshot" style="width:578.18px;height:650px;">
+<img src="Shreyan_G.JPG" alt="Shreyan Ganguly Headshot" style="width:489.23px;height:550px;">
 
 <!--
   
