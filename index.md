@@ -11,15 +11,12 @@
 
 <!-- **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help -->
 
-<img src="Shreyan_G.JPG" alt="Shreyan Ganguly Headshot" style="width:489.23px;height:550px;">
+<img src="Shreyan_G.JPG" alt="Shreyan Ganguly Headshot" style="height:550px;">
 
-<!--
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s69xmo84BM4?si=Y1eVY08nkV2qWN_b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
@@ -27,7 +24,144 @@ For your final milestone, explain the outcome of your project. Key details to in
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
 
--->
+## Code
+
+'''python
+# SPDX-FileCopyrightText: 2023 John Park for Adafruit
+# SPDX-License-Identifier: MIT
+# Bricktunes LEGO Color Synth
+# Feather RP2040 Prop-Maker +ma AS7341 Color Sensor
+# Color comparison code and chime library by CGrover
+
+import time
+import math
+import board
+import digitalio
+import audiobusio
+from adafruit_as7341 import AS7341, Gain
+import audiomixer
+from cedargrove_chime import Chime, Voice, Material, Striker
+
+
+TOLERANCE = 1000  # The color matching tolerance index (0 to 8 * max_sensor_count)
+
+
+sensor = AS7341(board.STEMMA_I2C())
+sensor.astep = 128  # (999) The integration time step size in 2.78 microsecond increments
+sensor.atime = 50  # The integration time step count.
+sensor.gain = Gain.GAIN_256X
+sensor.led_current = 4  # increments in units of 4
+sensor.led = True
+max_sensor_count = (sensor.astep + 1) * (sensor.atime + 1)
+
+# ===================================================
+# color lists as 8-channel tuples (channels[0:8])
+brick_full_spectrum_values = [
+                                (93.73, 1420.34, 1136.94, 890.2, 611.73, 413.41, 457.08, 299.77), # Blue
+                                (342, 428, 816, 2028, 4757, 5448, 5881, 3426), # Bright Lt Orange
+                                (391, 2507, 2089, 2030, 2641, 3675, 5694, 3845), # Bright Pink
+                                (109.3, 1074.6, 622.37, 465.32, 475.1, 497.74, 850.41, 1155.62), # Dark Purple
+                                (182.15, 361.74, 727.82, 2139.39, 3225.02, 2459.06, 2226.94, 1038.07), # Lime
+                                (155.45, 316.98, 314.04, 346.15, 519.93, 1193.47, 3459.11, 2824.04) # Red
+]
+
+brick_color_names = [
+                        "Blue",
+                        "Bright Light Orange",
+                        "Bright Pink",
+                        "Dark Purple",
+                        "Lime",
+                        "Red"
+]
+
+gap_state = False
+
+# ===================================================
+# audio setup
+power = digitalio.DigitalInOut(board.EXTERNAL_POWER)
+power.switch_to_output(value=True)
+audio_output = audiobusio.I2SOut(board.I2S_BIT_CLOCK, board.I2S_WORD_SELECT, board.I2S_DATA)
+
+mixer = audiomixer.Mixer(sample_rate=11020, buffer_size=4096, voice_count=1, channel_count=1)
+audio_output.play(mixer)
+mixer.voice[0].level = 0.15  # adjust this for overall volume
+
+brickscale = [
+        "E7", "E5", "D#7", "D#5", "C#7", "C#5"
+]
+
+# Instantiate the chime synthesizer with custom parameters
+chime = Chime(
+                mixer.voice[0],
+                scale=brickscale,
+                material=Material.SteelEMT,  # SteelEMT, Ceramic, Wood, Copper, Aluminum, Brass
+                striker=Striker.Metal,  # Metal, Plexiglas, SoftWood, HardWood
+                voice=Voice.Tubular,  # Bell, Perfect, Tubular
+                scale_offset=-16
+)
+
+
+
+# Play scale notes sequentially
+for index, note in enumerate(chime.scale):
+    chime.strike(note, 3.0)
+    time.sleep(0.1)
+time.sleep(1)
+
+def compare_n_channel_colors(color_1, color_2, tolerance=0):
+    """Compares two integer multichannel count tuples using an unweighted linear
+    Euclidean difference. If the color value difference is within the tolerance
+    band of the reference, the method returns True.
+    The difference value index `tolerance` is used to detect color similarity.
+    Value range is an integer value from 0 to
+    (maximum_channel_count * number_of_channels). Default is 0 (detects a
+    single color value)."""
+    # Create list of channel deltas using list comprehension
+    deltas = [((color_1[idx] - count) ** 2) for idx, count in enumerate(color_2)]
+    # Resolve squared deltas to a Euclidean difference
+    # pylint: disable=c-extension-no-member
+    delta_color = math.sqrt(sum(deltas))
+    return bool(delta_color <= tolerance)
+
+print("Bricktunes ready")
+
+while True:
+    sensor_color = sensor.all_channels
+    if sensor_color[0] <= 70: # Detects if there is not brick
+        if not gap_state:
+            print("No Brick Detected")
+            gap_state = True
+    else:
+        for i in range(len(brick_color_names)): # Iterates through the colors and compares them to the value the color sensor detects
+            color_match = compare_n_channel_colors(sensor_color, brick_full_spectrum_values[i], TOLERANCE)
+            if color_match is True:
+                chime.strike(chime.scale[i], 7)
+                gap_state = False
+                print("sensor color:", sensor_color, "| ref:", brick_full_spectrum_values[i])
+                print(brick_color_names[i])
+                time.sleep(0.25) #Change this number if you want notes repeated more or less often when hovering over them
+                break
+
+""" Comment the while statement above and uncomment this then replace the value of the color you want with the resultant value in the serial montitor.
+r_val = [0, 0, 0, 0, 0, 0, 0, 0]
+
+print("initiating...")
+time.sleep(0.5)
+print("3")
+time.sleep(1)
+print("2")
+time.sleep(1)
+print("1")
+print(processing...)
+for i in range(100):
+    s=list(sensor.all_channels)
+    r_val = [x + y for x, y in zip(r_val, s)]
+for i in range(8):
+    r_val[i] = r_val[i]/100
+print("the average value for your color is:" + r_val)
+
+"""
+'''
 
 # Second Milestone
 
