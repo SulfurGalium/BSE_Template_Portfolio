@@ -18,6 +18,9 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s69xmo84BM4?si=Y1eVY08nkV2qWN_b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Summary
+
+So far since the last milestone I have adjusted the values for the colors 
 For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
 - What your biggest challenges and triumphs were at BSE
@@ -26,7 +29,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 ## Code
 
-'''python
+```python
 # SPDX-FileCopyrightText: 2023 John Park for Adafruit
 # SPDX-License-Identifier: MIT
 # Bricktunes LEGO Color Synth
@@ -161,7 +164,7 @@ for i in range(8):
 print("the average value for your color is:" + r_val)
 
 """
-'''
+```
 
 # Second Milestone
 
@@ -482,17 +485,19 @@ void loop() {
 
 }
 ```
-
+-->
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-
+| Adafruit AS7341 10-Channel Light / Color Sensor Breakout - STEMMA QT / Qwiic | Color Sensor | $15.95 | <a href="https://www.adafruit.com/product/4698/"> Link </a> |
+| Mono Enclosed Speaker with Plain Wires - 3W 4 Ohm | Speaker | $3.95 | <a href="https://www.adafruit.com/product/4445/"> Link </a> |
+| Adafruit RP2040 Prop-Maker Feather with I2S Audio Amplifier | Microcontroller | $19.95 | <a href="https://www.adafruit.com/product/5768./"> Link </a> |
+| STEMMA QT / Qwiic JST SH 4-Pin Cable - 400mm long | Wires | $1.50 | <a href="https://www.adafruit.com/product/5385/"> Link </a> |
+| STEMMA QT / Qwiic JST SH 4-Pin Cable - 400mm long | Wires | $1.50 | <a href="https://www.adafruit.com/product/5385/"> Link </a> |
+<!--
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
 - [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
