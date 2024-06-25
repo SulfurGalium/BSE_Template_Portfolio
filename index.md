@@ -20,13 +20,13 @@
 
 ## Summary
 
-So far since the last milestone I have adjusted the values for the colors 
-For your final milestone, explain the outcome of your project. Key details to include are:
+So far since the last milestone I have adjusted the values for the colors with an algorithm to find the average value of the color. The overall outcome of this project has been a glove that can detect specific colors and play a corresponding note. So far my biggest challenge in bluestamp was getting the sensitivity of my color sensor right, seeing my trouble an instructor nudged me in the direction of using an algorithm to find the right values for each color. Solving this problenm has been my biggest triumph. So far I have learned about circuitpy, github, color values, audio/speakers, and microcontrollers through my time working on this project and in BSE. In the future I hope to learn more about CAD and assembley of electronics.
+<!--For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
 - What your biggest challenges and triumphs were at BSE
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
-
+-->
 ## Code
 
 ```python
