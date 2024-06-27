@@ -5,6 +5,22 @@
 <!--- This is an HTML comment in Markdown -->
 <!--- Anything between these symbols will not render on the published site -->
 
+<details>
+
+<summary>Tips for collapsed sections</summary>
+
+### You can add a header
+
+You can add text within a collapsed section. 
+
+You can add an image or a code block, too.
+
+```ruby
+   puts "Hello World"
+```
+
+</details>
+
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Shreyan G | Lynbrook | Mechanical Engineering | Incoming Sophmore
@@ -168,6 +184,7 @@ print("the average value for your color is:" + r_val)
 
 """
 ```
+
 </details>
 # Second Milestone
 
