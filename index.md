@@ -28,6 +28,9 @@ So far since the last milestone I have adjusted the values for the colors with a
 - What you hope to learn in the future after everything you've learned at BSE
 -->
 ## Code
+<details>
+
+<summary>Tips for collapsed sections</summary>
 
 ```python
 # SPDX-FileCopyrightText: 2023 John Park for Adafruit
@@ -165,7 +168,7 @@ print("the average value for your color is:" + r_val)
 
 """
 ```
-
+</details>
 # Second Milestone
 
 <!--**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**-->
