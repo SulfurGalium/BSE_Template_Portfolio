@@ -4,20 +4,6 @@
 <!---You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:-->
 <!--- This is an HTML comment in Markdown -->
 <!--- Anything between these symbols will not render on the published site -->
-# K
-<details>
-
-### You can add a header
-
-You can add text within a collapsed section. 
-
-You can add an image or a code block, too.
-
-```ruby
-puts "Hello World"
-```
-
-</details>
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -42,9 +28,6 @@ So far since the last milestone I have adjusted the values for the colors with a
 - What you hope to learn in the future after everything you've learned at BSE
 -->
 ## Code
-<details>
-
-<summary>Tips for collapsed sections</summary>
 
 ```python
 # SPDX-FileCopyrightText: 2023 John Park for Adafruit
@@ -182,8 +165,9 @@ print("the average value for your color is:" + r_val)
 
 """
 ```
-
-</details>
+---
+sndsdnsdknsdnksnds
+---
 # Second Milestone
 
 <!--**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**-->
