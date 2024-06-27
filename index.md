@@ -19,6 +19,8 @@
 
 # Final Milestone
 
+---
+
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s69xmo84BM4?si=Y1eVY08nkV2qWN_b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -40,6 +42,8 @@ So far since the last milestone I have adjusted the values for the colors with a
 <br>
 
 ## Code
+
+<br>
 
 ```python
 # SPDX-FileCopyrightText: 2023 John Park for Adafruit
@@ -182,6 +186,8 @@ print("the average value for your color is:" + r_val)
 
 # Second Milestone
 
+---
+
 <br>
 
 <!--**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**-->
@@ -200,14 +206,23 @@ For your second milestone, explain what you've worked on since your previous mil
 
 ## Summary
 
+<br>
+
 So far I have now enabled the sensor to detect what color it is facing by matching which color it is closest too on a spectrum of color values.
+
+<br>
 
 ## Challenges
 
+<br>
+
 A challenge I faced was adjusting the sensitivity of the color sensor so it could accurately differentiate colors while stil being sensitive to what it was looking at. I overcame this with trial and error tweaking the sensitivity values.
+
+<br>
 
 ## Code
 
+<br>
 
 ```python
 # SPDX-FileCopyrightText: 2023 John Park for Adafruit
@@ -356,9 +371,9 @@ while True:
 
 ---
 
-<br>
-
 # First Milestone
+
+---
 
 <br>
 
@@ -371,16 +386,27 @@ For your first milestone, describe what your project is and how you plan to buil
 - What your plan is to complete your project
 -->
 
+<br>
+
 ## Summary
+
+<br>
 
 There are three components of my project, a color sensor, a speaker, a feather microcontroller chip. Currently I am not using the color sensor and just playing notes but for my next milestone I plan to play noes depending on the color sensed.
 
+<br>
+
 ## Challenges
+
+<br>
 
 The main challenge I faced was working with the libraries of the code namely the sound library. To counter this I put the code for the library from here https://github.com/CedarGroveStudios/CircuitPython_MIDI_Tools/blob/main/cedargrove_midi_tools.py directly into the lib file of the project. 
 
+<br>
+
 ## Code
 
+<br>
 
 ```python
 # SPDX-FileCopyrightText: 2023 John Park for Adafruit
@@ -514,9 +540,14 @@ void loop() {
 ```
 -->
 
+<br>
+
 ---
 
 # Bill of Materials
+
+---
+
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
@@ -538,20 +569,36 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 
 -->
 
+<br>
+
 ---
 
 # Starter Project
 
+---
+
+<br>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XZfSQq2BNJk?si=gnxV0VoB6s6afZ-t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<br>
 
 ## Summary
+
+<br>
+  
   For my starter project I chose the Arduino starter project. The components involved were an Arduino R3, an Arduino Protoshield, a servo, and a potentiometer. After you gather the materials solder them to the protoshield making sure that the signal wire of the servo is connected to the digital pin you want to control it from (I chose 9) for the potentiometer the middle pin should be attached to the analog in pin you want (I chose A0). Some challanges I faced were when solder would connect pins that werent supposed to be connected and loose connections from both the solder and the potentiometer.
   The overall Goal was to make a servo that is controlled by a potentiometer in a one to one ration using the map function. With the analog input of the potentiometer from 0 to 1023 dpendent on the angle of the potentiometer it divides 180 which is the digital input of the servo in degrees.
 
+<br>
+
 <img src="StarterProject.jpg" alt="Image of Starter Project" style="width:500px;height:500px;">
 
+<br>
+
 ## Code
+
+<br>
 
 ```c++
 #include <Servo.h>
