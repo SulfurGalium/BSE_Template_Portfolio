@@ -15,6 +15,8 @@
 
 <img src="Shreyan_G.JPG" alt="Shreyan Ganguly Headshot" style="height:550px;">
 
+<br>
+
 ---
 
 # Final Milestone
@@ -181,6 +183,8 @@ print("the average value for your color is:" + r_val)
 
 """
 ```
+
+<br>
 
 ---
 
@@ -368,6 +372,8 @@ while True:
                     print(brick_color_names[i])
                 break
 ```
+
+<br>
 
 ---
 
@@ -558,6 +564,8 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Adafruit RP2040 Prop-Maker Feather with I2S Audio Amplifier | Microcontroller | $19.95 | <a href="https://www.adafruit.com/product/5768./"> Link </a> |
 | STEMMA QT / Qwiic JST SH 4-Pin Cable - 400mm long | Wires | $1.50 | <a href="https://www.adafruit.com/product/5385/"> Link </a> |
 | STEMMA QT / Qwiic JST SH 4-Pin Cable - 400mm long | Wires | $1.50 | <a href="https://www.adafruit.com/product/5385/"> Link </a> |
+
+
 <!--
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
