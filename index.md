@@ -19,9 +19,15 @@
 
 # Final Milestone
 
+<br>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s69xmo84BM4?si=Y1eVY08nkV2qWN_b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<br>
+
 ## Summary
+
+<br>
 
 So far since the last milestone I have adjusted the values for the colors with an algorithm to find the average value of the color. The overall outcome of this project has been a glove that can detect specific colors and play a corresponding note. So far my biggest challenge in bluestamp was getting the sensitivity of my color sensor right, seeing my trouble an instructor nudged me in the direction of using an algorithm to find the right values for each color. Solving this problenm has been my biggest triumph. So far I have learned about circuitpy, github, color values, audio/speakers, and microcontrollers through my time working on this project and in BSE. In the future I hope to learn more about CAD and assembley of electronics.
 <!--For your final milestone, explain the outcome of your project. Key details to include are:
@@ -30,6 +36,9 @@ So far since the last milestone I have adjusted the values for the colors with a
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
 -->
+
+<br>
+
 ## Code
 
 ```python
@@ -173,6 +182,8 @@ print("the average value for your color is:" + r_val)
 
 # Second Milestone
 
+<br>
+
 <!--**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**-->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/D4r-M5sbj2g?si=xL69JCIFBoXLwTrW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -184,6 +195,9 @@ For your second milestone, explain what you've worked on since your previous mil
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
 -->
+
+<br>
+
 ## Summary
 
 So far I have now enabled the sensor to detect what color it is facing by matching which color it is closest too on a spectrum of color values.
@@ -193,6 +207,7 @@ So far I have now enabled the sensor to detect what color it is facing by matchi
 A challenge I faced was adjusting the sensitivity of the color sensor so it could accurately differentiate colors while stil being sensitive to what it was looking at. I overcame this with trial and error tweaking the sensitivity values.
 
 ## Code
+
 
 ```python
 # SPDX-FileCopyrightText: 2023 John Park for Adafruit
@@ -341,7 +356,11 @@ while True:
 
 ---
 
+<br>
+
 # First Milestone
+
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YGtqLBfF2uQ?si=UFyol-h8SzUmKDnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <!--
@@ -361,6 +380,7 @@ There are three components of my project, a color sensor, a speaker, a feather m
 The main challenge I faced was working with the libraries of the code namely the sound library. To counter this I put the code for the library from here https://github.com/CedarGroveStudios/CircuitPython_MIDI_Tools/blob/main/cedargrove_midi_tools.py directly into the lib file of the project. 
 
 ## Code
+
 
 ```python
 # SPDX-FileCopyrightText: 2023 John Park for Adafruit
