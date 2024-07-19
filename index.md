@@ -570,7 +570,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Mono Enclosed Speaker with Plain Wires - 3W 4 Ohm | Speaker | $3.95 | <a href="https://www.adafruit.com/product/4445/"> Link </a> |
 | Adafruit RP2040 Prop-Maker Feather with I2S Audio Amplifier | Microcontroller | $19.95 | <a href="https://www.adafruit.com/product/5768./"> Link </a> |
 | STEMMA QT / Qwiic JST SH 4-Pin Cable - 400mm long | Wires | $1.50 | <a href="https://www.adafruit.com/product/5385/"> Link </a> |
-| STEMMA QT / Qwiic JST SH 4-Pin Cable - 400mm long | Wires | $1.50 | <a href="https://www.adafruit.com/product/5385/"> Link </a> |
+| Adafruit AS7341 10-Channel Light / Color Sensor Breakout - STEMMA QT / Qwiic | Color Sensor | $15.95 | <a href="https://www.adafruit.com/product/4698/"> Link </a> |
 
 
 <!--
